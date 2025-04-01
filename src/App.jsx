@@ -1,14 +1,8 @@
-import React from "react";
 import { MdPerson } from "react-icons/md";
 import {
   FaCartShopping,
-  FaHandHoldingHeart,
-  FaArrowLeft,
 } from "react-icons/fa6";
-import { PiPillLight } from "react-icons/pi";
-import { TiFlashOutline } from "react-icons/ti";
-import { PiFlowerLotusBold } from "react-icons/pi";
-const HomePage = () => {
+function HomePage() {
   return (
     <div className="container">
       <div className="mx-auto px-4 py-6">
@@ -172,7 +166,9 @@ const HomePage = () => {
             <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
               <PiPillLight alt="547" className="text-[30px]" />
             </span>
-            <span className="text-xs p-2 flex items-center leading-tight">Лекарственные препараты</span>
+            <span className="text-xs p-2 flex items-center leading-tight">
+              Лекарственные препараты
+            </span>
           </a>
           <a
             href="/catalog/lekarstvennye-preparaty"
@@ -181,7 +177,9 @@ const HomePage = () => {
             <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
               <TiFlashOutline alt="547" className="text-[30px]" />
             </span>
-            <span className="text-xs p-2 flex items-center leading-tight">Витамины и БАДы</span>
+            <span className="text-xs p-2 flex items-center leading-tight">
+              Витамины и БАДы
+            </span>
           </a>
           <a
             href="/catalog/lekarstvennye-preparaty"
@@ -190,7 +188,9 @@ const HomePage = () => {
             <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
               <PiFlowerLotusBold alt="547" className="text-[30px]" />
             </span>
-            <span className="text-xs p-2 flex items-center leading-tight">Фитопрепараты</span>
+            <span className="text-xs p-2 flex items-center leading-tight">
+              Фитопрепараты
+            </span>
           </a>
           <a
             href="/catalog/lekarstvennye-preparaty"
@@ -199,7 +199,9 @@ const HomePage = () => {
             <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
               <FaHandHoldingHeart alt="547" className="text-[30px]" />
             </span>
-            <span className="text-xs p-2 flex items-center leading-tight">Планирование семьи</span>
+            <span className="text-xs p-2 flex items-center leading-tight">
+              Планирование семьи
+            </span>
           </a>
           <a
             href="/catalog/lekarstvennye-preparaty"
@@ -212,7 +214,9 @@ const HomePage = () => {
                 className="text-[30px]"
               />
             </span>
-            <span className="text-xs p-2 flex items-center leading-tight">Мама и малыш</span>
+            <span className="text-xs p-2 flex items-center leading-tight">
+              Мама и малыш
+            </span>
           </a>
           <a
             href="/catalog/lekarstvennye-preparaty"
@@ -225,7 +229,9 @@ const HomePage = () => {
                 className="text-[30px]"
               />
             </span>
-            <span className="text-xs p-2 flex items-center leading-tight">Медицинские изделия</span>
+            <span className="text-xs p-2 flex items-center leading-tight">
+              Медицинские изделия
+            </span>
           </a>
           <a
             href="/catalog/lekarstvennye-preparaty"
@@ -238,7 +244,9 @@ const HomePage = () => {
                 className="text-[30px]"
               />
             </span>
-            <span className="text-xs p-2 flex items-center leading-tight">Приборы медицинские</span>
+            <span className="text-xs p-2 flex items-center leading-tight">
+              Приборы медицинские
+            </span>
           </a>
           <a
             href="/catalog/lekarstvennye-preparaty"
@@ -251,12 +259,14 @@ const HomePage = () => {
                 className="text-[30px]"
               />
             </span>
-            <span className="text-xs p-2 flex items-center leading-tight">Гигиена, красота и уход</span>
+            <span className="text-xs p-2 flex items-center leading-tight">
+              Гигиена, красота и уход
+            </span>
           </a>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default HomePage;
