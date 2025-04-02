@@ -8,3 +8,6 @@
 input{
     outline: blue;
 }
+button{
+    cursor: pointer ;
+}
