@@ -3,7 +3,7 @@ import { TiFlashOutline } from "react-icons/ti";
 import { PiFlowerLotusBold } from "react-icons/pi";
 function Header() {
   return (
-    <>
+    <div>
       <div className="flex items-center justify-between p-4 gap-2 bg-white border-b">
         <div>
           <a
@@ -129,7 +129,7 @@ function Header() {
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
