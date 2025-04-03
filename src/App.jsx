@@ -1,11 +1,11 @@
 import { MdPerson } from "react-icons/md";
 import { PiPillLight } from "react-icons/pi";
-import { FaCartShopping } from "react-icons/fa6";
+import { FaCartShopping, FaHandHoldingHeart } from "react-icons/fa6";
 import { TiFlashOutline } from "react-icons/ti";
-import { FaHandHoldingHeart } from "react-icons/fa6";
-import { PiFlowerLotusBold } from "react-icons/pi";
+import { PiFlowerLotusLight } from "react-icons/pi";
 import { products } from "/src/data/datas.js";
 import ProductCard from "./components/ProductCard";
+import ProductCard2 from "./components/CategoryCard";
 function HomePage() {
   return (
     <div className="container">
@@ -29,7 +29,7 @@ function HomePage() {
           </div>
           <a
             href="/auth"
-            class="flex flex-col gap-0.5 font-semibold text-sm text-blue-500 items-center undefined"
+            class="flex flex-col gap-0.5 font-semibold text-sm text-blue-500 items-center"
           >
             <MdPerson className="w-[20px] h-[20px]" />
             <span className="truncate block w-full text-center">Войти</span>
@@ -73,7 +73,7 @@ function HomePage() {
               className="flex flex-col gap-3 items-center flex-1 undefined"
             >
               <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-                <PiFlowerLotusBold alt="547" className="text-[30px]" />
+                <PiFlowerLotusLight alt="547" className="text-[30px]" />
               </span>
               <span className="text-center text-sm">Фитопрепараты</span>
             </a>
@@ -154,6 +154,22 @@ function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+        <div className="flex justify-center">
+          <button className="flex justify-center items-center gap-2 bg-white text-gray-500 py-2 px-4 rounded-lg text-sm leading-6 font-semibold ring-1 ring-inset ring-gray-200">
+            Смотреть все Популярные препараты
+          </button>
+        </div>
+        <div className="flex justify-between items-baseline">
+          <h2 className="font-semibold text-3xl">Популярные препараты</h2>
+          <a href="/collection/popular" className="text-blue-500 text-sm">
+            Смотреть все
+          </a>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+          {products.map((products2) => (
+            <ProductCard2 key={products2.id} product={products2} />
           ))}
         </div>
       </section>

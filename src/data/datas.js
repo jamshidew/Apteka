@@ -84,7 +84,7 @@ export const products = [
 export const products2 = [
   {
     id: 1,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(1).webp",
+    img: "https://api.gopharm.uz/media/drugs-thumbnail/461a43d0-a0b5-4449-8ee4-a182bd6b018e.jpeg",
     name: "Канефрон N таб.",
     price: 125100,
     manufacturer: "Bionorica SE, Германия",
@@ -93,7 +93,7 @@ export const products2 = [
   },
   {
     id: 2,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(2).webp",
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(21).webp",
     name: "Тивортин р-р 42мг/мл 100мл",
     price: 66600,
     manufacturer: "Юрия Фарм ООО, Украина",
@@ -102,7 +102,7 @@ export const products2 = [
   },
   {
     id: 3,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(3).webp",
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(35).webp",
     name: "Клинтопик гель 10мг/50мг 15г",
     price: 109700,
     manufacturer: "Farmaprim, Молдова",
@@ -111,7 +111,7 @@ export const products2 = [
   },
   {
     id: 4,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(4).webp",
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(36).webp",
     name: "Магне B6 форте таб. №40",
     price: 78000,
     manufacturer: "Chinohin Pharm & ChemWorksPVTCo.Ltd, Венгрия",
@@ -120,7 +120,7 @@ export const products2 = [
   },
   {
     id: 5,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(5).webp",
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(37).webp",
     name: "Эссенциале форте H капс.№30",
     price: 160000,
     manufacturer: "Sanofi Winthrop Industries, Франция",
@@ -129,7 +129,7 @@ export const products2 = [
   },
   {
     id: 6,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(6).webp",
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(38).webp",
     name: "Хофитол таблетки №180",
     price: 169000,
     manufacturer: "Rosa Phito Pharm, Дания",
@@ -138,7 +138,7 @@ export const products2 = [
   },
   {
     id: 7,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(7).webp",
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(39).webp",
     name: "Бепантен мазь 5% 30г",
     price: 81800,
     manufacturer: "Bayer Pharma AG, Германия",
@@ -147,11 +147,47 @@ export const products2 = [
   },
   {
     id: 8,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(8).webp",
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(42).webp",
     name: "Дюфастон таб. 10мг №20",
     price: 161000,
     manufacturer: "Эббот, Франция",
     availability: true,
     delivery: "сегодня",
+  },
+  {
+    id: 9,
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/dostineks-0.5mg-8tab.webp",
+    name: "Достинекс таб. 0,5мг №8",
+    price: 331300,
+    manufacturer: "Pfizer Italia S.r.l, Италия",
+    availability: true,
+    delivery: "Доставка сегодня",
+  },
+  {
+    id: 10,
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(44).webp",
+    name: "Циклоферон амп. 2мл №5",
+    price: 106600,
+    manufacturer: "Полисан, Россия",
+    availability: true,
+    delivery: "Доставка сегодня",
+  },
+  {
+    id: 11,
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(45).webp",
+    name: "Реосорбилакт р-р д/инф. 200мл",
+    price: 52200,
+    manufacturer: "Юрия фарм ООО, Украина",
+    availability: true,
+    delivery: "Доставка сегодня",
+  },
+  {
+    id: 12,
+    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(46).webp",
+    name: "Л-Лизина Эсцинат р-р д/ин. 1 мг/мл 5 мл №10",
+    price: 180500,
+    manufacturer: "Галич фарм АО, Украина",
+    availability: true,
+    delivery: "Доставка сегодня",
   },
 ];

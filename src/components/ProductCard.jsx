@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="border border-s-amber-100 p-4 rounded-lg shadow-lg bg-white flex flex-col">
+    <div className="border p-4 rounded-lg shadow-lg bg-white flex flex-col">
       <img
         src={product.img}
         alt={product.name}
@@ -27,6 +27,7 @@ const ProductCard = ({ product }) => {
           Доставка {product.delivery}
         </p>
       </div>
+        
     </div>
   );
 };
