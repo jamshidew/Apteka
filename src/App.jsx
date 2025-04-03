@@ -5,6 +5,7 @@ import { TiFlashOutline } from "react-icons/ti";
 import { FaHandHoldingHeart } from "react-icons/fa6";
 import { PiFlowerLotusBold } from "react-icons/pi";
 import { products } from "/src/data/datas.js";
+import ProductCard from "./components/ProductCard";
 function HomePage() {
   return (
     <div className="container">
@@ -150,30 +151,9 @@ function HomePage() {
             Смотреть все
           </a>
         </div>
-        {/* <div className="grid grid-cols-4 gap-6">
-          <div className="flex flex-col gap-4 p-4 rounded-2xl border overflow-hidden relative bg-white">
-            <img
-              src="https://aptekaonline.uz/wp-content/uploads/lorataltab10.webp"
-              alt="Лораталь"
-              className=""
-            />
-            <p className="text-2xl font-semibold  ">от 26 800 сум</p>
-            <h2 className="line-clamp-3 text-sm break-words">
-              Лораталь таб. №10
-            </h2>
-            <p className="text-xs text-gray-400">
-              Нобель-Фармсаноат, Узбекистан
-            </p>
-            <button className="mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-              В корзину
-            </button>
-            <p className="text-green-500 mt-2">В наличии</p>
-            <p className="text-gray-500">Доставка сегодня</p>
-          </div>
-        </div> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-          {products.map((product, index) => (
-            <ProductCard key={index} product={product} />
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
