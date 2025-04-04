@@ -1,32 +1,33 @@
-const ProductCard2 = ({ products2 }) => {
+import React from "react";
+import { products2 } from "/src/data/datas.js";
+
+export default function ProductList() {
   return (
-    <div className="border p-4 rounded-lg shadow-lg bg-white flex flex-col">
-      <img
-        src={products2.img}
-        alt={products2.name}
-        className="w-70 h-70 object-contain"
-      />
-      <p className="text-2xl font-semibold">от {products2.price} сум</p>
-      <div className="flex flex-col gap-1 min-h-20 pt-3">
-        <h2 className="line-clamp-3 text-sm break-words">{products2.name}</h2>
-        <p className="text-xs text-gray-400 ">{products2.manufacturer}</p>
-      </div>
-      <button
-        onClick={() => {}}
-        className="mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-      >
-        В корзину
-      </button>
-      <div className="flex flex-wrap justify-center gap-4 items-center mt-3">
-        <p className="text-green-500">
-          {products2.availability ? "В наличии" : "Нет в наличии"}
-        </p>
-        <p className="text-xs text-gray-400 font-medium">
-          Доставка {products2.delivery}
-        </p>
-      </div>
+    <div>
+      {products2.map((item) => (
+        <div
+          key={item.id}
+          className="border p-4 rounded-lg bg-white flex flex-col border-[#e5e7eb]"
+        >
+          <img
+            src={item.img}
+            alt={item.name}
+            className="w-full h-32 object-contain"
+          />
+          <p className="text-2xl font-semibold">от {item.price} сум</p>
+          <h2 className="line-clamp-2 text-sm break-words">{item.name}</h2>
+          <p className="text-xs text-gray-400">{item.manufacturer}</p>
+          <button className="mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+            В корзину
+          </button>
+          <p className="text-green-500">
+            {item.availability ? "В наличии" : "Нет в наличии"}
+          </p>
+          <p className="text-xs text-gray-400 font-medium">
+            Доставка {item.delivery}
+          </p>
+        </div>
+      ))}
     </div>
   );
-};
-
-export default ProductCard2;
+}
