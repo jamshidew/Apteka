@@ -1,8 +1,6 @@
-import React from "react";
-
 const ProductCard = ({ product }) => {
   return (
-    <div className="border p-4 rounded-lg shadow-lg bg-white flex flex-col">
+    <div className="border p-4 rounded-lg bg-white flex border-[#e5e7eb] flex-col">
       <img
         src={product.img}
         alt={product.name}

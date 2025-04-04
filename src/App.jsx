@@ -3,7 +3,7 @@ import { PiPillLight } from "react-icons/pi";
 import { FaCartShopping, FaHandHoldingHeart } from "react-icons/fa6";
 import { TiFlashOutline } from "react-icons/ti";
 import { PiFlowerLotusLight } from "react-icons/pi";
-import { products } from "/src/data/datas.js";
+import { products, products2 } from "/src/data/datas.js";
 import ProductCard from "./components/ProductCard";
 import ProductCard2 from "./components/CategoryCard";
 function HomePage() {
@@ -167,11 +167,11 @@ function HomePage() {
             Смотреть все
           </a>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-          {products.map((products2) => (
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+          {products2.map((products2) => (
             <ProductCard2 key={products2.id} product={products2} />
           ))}
-        </div>
+        </div> */}
       </section>
     </div>
   );
