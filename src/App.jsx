@@ -7,6 +7,7 @@ import { products, drugscart } from "/src/data/datas.js";
 import ProductCard from "./components/ProductCard";
 import ProductList from "./components/CategoryCard";
 import DrugList from "./components/CategoryCard";
+import SwiperSlideList from "./components/HeaderSwiper";
 function HomePage() {
   return (
     <div className="container">
@@ -146,6 +147,7 @@ function HomePage() {
         <div></div>
       </div>
       <section className="flex flex-col gap-10">
+        <SwiperSlideList />
         <div className="flex justify-between items-baseline">
           <h2 className="font-semibold text-3xl">Популярные препараты</h2>
           <a href="/collection/popular" className="text-blue-500 text-sm">

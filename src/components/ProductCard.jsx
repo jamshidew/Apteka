@@ -25,7 +25,6 @@ const ProductCard = ({ product }) => {
           Доставка {product.delivery}
         </p>
       </div>
-        
     </div>
   );
 };
