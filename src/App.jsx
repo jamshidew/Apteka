@@ -3,9 +3,10 @@ import { PiPillLight } from "react-icons/pi";
 import { FaCartShopping, FaHandHoldingHeart } from "react-icons/fa6";
 import { TiFlashOutline } from "react-icons/ti";
 import { PiFlowerLotusLight } from "react-icons/pi";
-import { products, products2 } from "/src/data/datas.js";
+import { products, drugscart } from "/src/data/datas.js";
 import ProductCard from "./components/ProductCard";
 import ProductList from "./components/CategoryCard";
+import DrugList from "./components/CategoryCard";
 function HomePage() {
   return (
     <div className="container">
@@ -29,7 +30,7 @@ function HomePage() {
           </div>
           <a
             href="/auth"
-            class="flex flex-col gap-0.5 font-semibold text-sm text-blue-500 items-center"
+            className="flex flex-col gap-0.5 font-semibold text-sm text-blue-500 items-center"
           >
             <MdPerson className="w-[20px] h-[20px]" />
             <span className="truncate block w-full text-center">Войти</span>
@@ -168,8 +169,8 @@ function HomePage() {
           </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-          {products2.map((products2) => (
-            <ProductList key={products2.id} product={products2} />
+          {drugscart.map((product) => (
+            <DrugList key={product.id} item={product} />
           ))}
         </div>
       </section>
