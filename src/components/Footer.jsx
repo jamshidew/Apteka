@@ -11,8 +11,9 @@ import {
   FaThLarge,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SocialIcons from "./SocialIcons ";
 
-export default function PharmacySection() {
+export default function Footer() {
   return (
     <div className="container flex flex-col min-h-screen">
       <main className="flex-grow">
@@ -58,10 +59,10 @@ export default function PharmacySection() {
           </div>
         </div>
       </main>
-      <footer class="bg-gray-100 text-gray-800">
+      <footer class="bg-gray-100 text-gray-800 mb-7 rounded-2xl">
         <div class="bg-blue-500 text-white px-6 py-4 flex flex-col md:flex-row justify-between items-center rounded-t-2xl">
           <div class="text-center md:text-left">
-            <p class="text-lg font-bold">+998 (71) 205-0-888</p>
+            <p class="text-lg font-bold">+998 (77) 087-67-74</p>
             <p>Круглосуточный колл-центр</p>
           </div>
           <div class="text-center md:text-left mt-4 md:mt-0">
@@ -74,7 +75,7 @@ export default function PharmacySection() {
             class="w-36 mt-4 md:mt-0"
           />
         </div>
-        <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-5 gap-2">
+        <div class="mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-5 gap-2">
           <div>
             <h4 class="font-semibold mb-2">Покупателям</h4>
             <ul class="space-y-1 text-sm">
@@ -99,16 +100,6 @@ export default function PharmacySection() {
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold mb-2">Карьера</h4>
-            <ul class="space-y-1 text-sm">
-              <li>Вакансии</li>
-              <li>Водитель-курьер</li>
-              <li>Кассир</li>
-              <li>Сборщик</li>
-              <li>Продавец</li>
-            </ul>
-          </div>
-          <div>
             <h4 class="font-semibold mb-2">Компания</h4>
             <ul class="space-y-1 text-sm">
               <li>О компании GoPharm</li>
@@ -119,36 +110,33 @@ export default function PharmacySection() {
             </ul>
           </div>
 
-          <div>
-            <p class="font-semibold mb-3">GoPharm в соцсетях</p>
+          <div className="col-span-2 flex flex-col gap-4">
+            <p class="font-semibold mb-3 pl-5">GoPharm в соцсетях</p>
             <div class="flex flex-wrap gap-4 mb-4">
-              <FaTelegram className="inline-flex h-[20px] w-[20px] items-center justify-center shrink-0 rounded-lg text-blue-500 bg-white" />
-              <FaFacebookF className="inline-flex h-[20px] w-[20px] items-center justify-center shrink-0 rounded-lg text-blue-500 bg-white" />
-              <FaInstagram className="inline-flex h-[20px] w-[20px] items-center justify-center shrink-0 rounded-lg text-blue-500 bg-white" />
-              <FaYoutube className="inline-flex h-[20px] w-[20px] items-center justify-center shrink-0 rounded-lg text-blue-500 bg-white" />
+              <SocialIcons />
             </div>
-            <div class="flex items-center p-4 gap-3 bg-white rounded-2xl">
-              <div>
+            <div class="flex items-center p-4 gap-3 bg-white rounded-2xl pl-6">
+              <div className="w-[100px] h-full">
                 <img
-                  src="src/assets/imgs/qr-code-footer.png"
+                  src="/src/assets/imgs/qr-code-footer.png"
                   alt="QR"
-                  class="shrink-0 w-[400px]"
+                  class="w-full h-full"
                 />
               </div>
-              <div>
-                <p class="text-sm mb-2">
+              <div className="flex flex-col gap-2">
+                <p class="text-sm font-semibold">
                   Скидки, промокоды и акции в мобильном приложении
                 </p>
-                <div class="flex space-x-2">
+                <div class="flex items-center gap-2">
                   <a
                     href="#"
-                    class="bg-blue-500 text-white text-sm px-4 py-1.5 rounded-md"
+                    class="flex justify-center items-center gap-2 bg-blue-500 text-white py-2 px-4 rounded-lg text-sm leading-6 font-semibold"
                   >
                     App Store
                   </a>
                   <a
                     href="#"
-                    class="bg-blue-500 text-white text-sm px-4 py-1.5 rounded-md"
+                    class="flex justify-center items-center gap-2 bg-blue-500 text-white py-2 px-4 rounded-lg text-sm leading-6 font-semibold"
                   >
                     Telegram
                   </a>

@@ -8,6 +8,8 @@ import ProductCard from "./components/ProductCard";
 import DrugList from "./components/CategoryCard";
 import SwiperSlideList from "./components/HeaderSwiper";
 import PharmacySection from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 function HomePage() {
   return (
     <div className="container">
@@ -185,7 +187,10 @@ function HomePage() {
           </button>
         </div>
       </section>
-      <PharmacySection />
+      <Routes>
+        <Route path="/" element={<PharmacySection />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
