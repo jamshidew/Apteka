@@ -1,20 +1,29 @@
-import { Link } from "https://www.gopharm.uz/";
+import {
+  FaTelegram,
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
+import {
+  FaHandHoldingHeart,
+  FaTruck,
+  FaWallet,
+  FaThLarge,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-import { HandHeart, Truck, Wallet, Grid2X2 } from "lucide-react";
-
-function PharmacySection() {
+export default function PharmacySection() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="container flex flex-col min-h-screen">
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-2xl font-bold mb-8">
+          <h1 className="font-semibold text-3xl">
             Почему стоит заказывать лекарства у нас?
           </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 pt-[50px] md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-gray-50 p-6 rounded-lg">
               <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                <HandHeart className="text-white w-8 h-8" />
+                <FaHandHoldingHeart className="text-white w-8 h-8" />
               </div>
               <h3 className="font-bold text-lg mb-2">Доверие</h3>
               <p className="text-gray-700">
@@ -23,24 +32,23 @@ function PharmacySection() {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                <Truck className="text-white w-8 h-8" />
+                <FaTruck className="text-white w-8 h-8" />
               </div>
               <h3 className="font-bold text-lg mb-2">Доставка</h3>
               <p className="text-gray-700">Максимально в кратчайшее время.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                <Wallet className="text-white w-8 h-8" />
+                <FaWallet className="text-white w-8 h-8" />
               </div>
               <h3 className="font-bold text-lg mb-2">Экономия</h3>
               <p className="text-gray-700">
                 Бонусные баллы - Покупайте и зарабатывайте.
               </p>
             </div>
-
             <div className="bg-gray-50 p-6 rounded-lg">
               <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                <Grid2X2 className="text-white w-8 h-8" />
+                <FaThLarge className="text-white w-8 h-8" />
               </div>
               <h3 className="font-bold text-lg mb-2">Широкий Ассортимент</h3>
               <p className="text-gray-700">
@@ -50,264 +58,113 @@ function PharmacySection() {
           </div>
         </div>
       </main>
-      <div className="bg-blue-500 text-white py-4">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-col md:flex-row items-center gap-8 mb-4 md:mb-0">
-            <div>
-              <p className="font-bold">+998 (71) 205-0-888</p>
-              <p className="text-sm">Круглосуточный колл-центр</p>
-            </div>
-            <div>
-              <p className="font-bold">Telegram</p>
-              <p className="text-sm">Служба поддержки</p>
-            </div>
+      <footer class="bg-gray-100 text-gray-800">
+        <div class="bg-blue-500 text-white px-6 py-4 flex flex-col md:flex-row justify-between items-center rounded-t-2xl">
+          <div class="text-center md:text-left">
+            <p class="text-lg font-bold">+998 (71) 205-0-888</p>
+            <p>Круглосуточный колл-центр</p>
           </div>
-          <div className="flex items-center">
-            <span className="text-2xl font-bold">GoPharm</span>
+          <div class="text-center md:text-left mt-4 md:mt-0">
+            <p class="text-lg font-bold">Telegram</p>
+            <p>Служба поддержки</p>
           </div>
+          <img
+            src="data:image/png;base64,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"
+            alt="GoPharm Logo"
+            class="w-36 mt-4 md:mt-0"
+          />
         </div>
-      </div>
-      <footer className="bg-gray-50 py-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            <div>
-              <h4 className="font-bold mb-4">Покупателям</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Как сделать заказ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Карта аптек
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Оплата
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Доставка
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Контакты
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Публичная оферта
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Правила сайта
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Безопасность
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Бизнесу</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Стать поставщиком
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Открыть пункт выдачи
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Тендеры
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Аренда
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Партнерская программа
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Карьера</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Вакансии
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Водитель-курьер
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Кассир
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Сборщик
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Продавец
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Компания</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    О компании GoPharm
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Реквизиты
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Информация для СМИ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Политика компании
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="text-blue-600 hover:underline">
-                    Инвесторам и акционерам
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">GoPharm в соцсетях</h4>
-              <div className="flex space-x-4 mb-6">
-                <Link href="#" className="text-blue-600 hover:text-blue-800">
-                  <div className="bg-blue-100 rounded-full p-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-6.7c-.66 0-1.2-.54-1.2-1.2 0-.66.54-1.2 1.2-1.2.66 0 1.2.54 1.2 1.2 0 .66-.54 1.2-1.2 1.2zM17 17h-2v-3c0-.77-.23-1.3-.8-1.3-.56 0-.89.39-1.04.77-.05.14-.06.33-.06.52V17h-2v-6h2v.93c.34-.54.87-.93 1.56-.93 1.15 0 2.34.76 2.34 2.4V17z" />
-                    </svg>
-                  </div>
-                </Link>
-                <Link href="#" className="text-blue-600 hover:text-blue-800">
-                  <div className="bg-blue-100 rounded-full p-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
-                    </svg>
-                  </div>
-                </Link>
-                <Link href="#" className="text-blue-600 hover:text-blue-800">
-                  <div className="bg-blue-100 rounded-full p-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 18c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8zm-2-9c0-.55.45-1 1-1h2c.55 0 1 .45 1 1s-.45 1-1 1h-2c-.55 0-1-.45-1-1zm-3-3c0-.55.45-1 1-1h8c.55 0 1 .45 1 1s-.45 1-1 1h-8c-.55 0-1-.45-1-1zm0 6c0-.55.45-1 1-1h8c.55 0 1 .45 1 1s-.45 1-1 1h-8c-.55 0-1-.45-1-1z" />
-                    </svg>
-                  </div>
-                </Link>
-                <Link href="#" className="text-blue-600 hover:text-blue-800">
-                  <div className="bg-blue-100 rounded-full p-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M21.582 7.172a2.503 2.503 0 0 0-1.768-1.768C18.254 5 12 5 12 5s-6.254 0-7.814.404a2.503 2.503 0 0 0-1.768 1.768C2.012 8.746 2 12 2 12s.012 3.254.418 4.828a2.503 2.503 0 0 0 1.768 1.768C5.746 19 12 19 12 19s6.254 0 7.814-.404a2.503 2.503 0 0 0 1.768-1.768C22 15.254 22 12 22 12s0-3.254-.418-4.828zM10 15V9l5.2 3-5.2 3z" />
-                    </svg>
-                  </div>
-                </Link>
-                <Link href="#" className="text-blue-600 hover:text-blue-800">
-                  <div className="bg-blue-100 rounded-full p-2">
-                    <svg
-                      className="w-5 h-5"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M12.53 20c6.237 0 9.65-5.166 9.65-9.65 0-.15 0-.298-.01-.447A6.922 6.922 0 0 0 24 7.766a6.779 6.779 0 0 1-1.95.535 3.397 3.397 0 0 0 1.488-1.87 6.778 6.778 0 0 1-2.156.823A3.38 3.38 0 0 0 16.62 9.67c0 .266.03.525.085.776a9.59 9.59 0 0 1-6.96-3.526 3.39 3.39 0 0 0 1.044 4.51 3.35 3.35 0 0 1-1.525-.42v.043a3.379 3.379 0 0 0 2.709 3.312 3.36 3.36 0 0 1-1.525.058 3.38 3.38 0 0 0 3.156 2.347A6.78 6.78 0 0 1 0 18.186 9.55 9.55 0 0 0 5.175 20" />
-                    </svg>
-                  </div>
-                </Link>
-              </div>
+        <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-5 gap-2">
+          <div>
+            <h4 class="font-semibold mb-2">Покупателям</h4>
+            <ul class="space-y-1 text-sm">
+              <li>Как сделать заказ</li>
+              <li>Карта аптек</li>
+              <li>Оплата</li>
+              <li>Доставка</li>
+              <li>Контакты</li>
+              <li>Публичная оферта</li>
+              <li>Правила сайта</li>
+              <li>Безопасность</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">Бизнесу</h4>
+            <ul class="space-y-1 text-sm">
+              <li>Стать поставщиком</li>
+              <li>Открыть пункт выдачи</li>
+              <li>Тендеры</li>
+              <li>Аренда</li>
+              <li>Партнерская программа</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">Карьера</h4>
+            <ul class="space-y-1 text-sm">
+              <li>Вакансии</li>
+              <li>Водитель-курьер</li>
+              <li>Кассир</li>
+              <li>Сборщик</li>
+              <li>Продавец</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">Компания</h4>
+            <ul class="space-y-1 text-sm">
+              <li>О компании GoPharm</li>
+              <li>Реквизиты</li>
+              <li>Информация для СМИ</li>
+              <li>Политика компании</li>
+              <li>Инвесторам и акционерам</li>
+            </ul>
+          </div>
 
-              <div className="mb-4">
-                <p className="font-bold mb-2">
+          <div>
+            <p class="font-semibold mb-3">GoPharm в соцсетях</p>
+            <div class="flex flex-wrap gap-4 mb-4">
+              <FaTelegram className="inline-flex h-[20px] w-[20px] items-center justify-center shrink-0 rounded-lg text-blue-500 bg-white" />
+              <FaFacebookF className="inline-flex h-[20px] w-[20px] items-center justify-center shrink-0 rounded-lg text-blue-500 bg-white" />
+              <FaInstagram className="inline-flex h-[20px] w-[20px] items-center justify-center shrink-0 rounded-lg text-blue-500 bg-white" />
+              <FaYoutube className="inline-flex h-[20px] w-[20px] items-center justify-center shrink-0 rounded-lg text-blue-500 bg-white" />
+            </div>
+            <div class="flex items-center p-4 gap-3 bg-white rounded-2xl">
+              <div>
+                <img
+                  src="src/assets/imgs/qr-code-footer.png"
+                  alt="QR"
+                  class="shrink-0 w-[400px]"
+                />
+              </div>
+              <div>
+                <p class="text-sm mb-2">
                   Скидки, промокоды и акции в мобильном приложении
                 </p>
-                <div className="flex items-center justify-center bg-gray-200 rounded-lg p-4 mb-4">
-                  <div className="w-24 h-24 bg-white p-2 rounded-lg flex items-center justify-center">
-                    <div className="w-20 h-20 bg-gray-800 rounded-lg"></div>
-                  </div>
-                </div>
-                <div className="flex space-x-2">
-                  <Link
+                <div class="flex space-x-2">
+                  <a
                     href="#"
-                    className="bg-blue-500 text-white px-4 py-2 rounded-lg flex-1 text-center"
+                    class="bg-blue-500 text-white text-sm px-4 py-1.5 rounded-md"
                   >
                     App Store
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     href="#"
-                    className="bg-blue-500 text-white px-4 py-2 rounded-lg flex-1 text-center"
+                    class="bg-blue-500 text-white text-sm px-4 py-1.5 rounded-md"
                   >
                     Telegram
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 mb-4 md:mb-0">
-              © 2020–2025 GoPharm. Все права защищены.
-            </p>
-            <div className="flex space-x-2">
-              <button className="px-4 py-2 border border-gray-300 rounded-lg">
-                Ташкент
-              </button>
-              <button className="px-4 py-2 border border-gray-300 rounded-lg">
-                O'zbekcha
-              </button>
-            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center px-6 py-4 border-t text-sm">
+          <p class="mb-2 md:mb-0">© 2020–2025 GoPharm. Все права защищены.</p>
+          <div class="flex gap-2">
+            <button class="border px-3 py-1 rounded-md">Ruscha</button>
+            <button class="border px-3 py-1 rounded-md">O'zbekcha</button>
           </div>
         </div>
       </footer>
     </div>
   );
 }
-export default PharmacySection;

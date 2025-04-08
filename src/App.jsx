@@ -5,16 +5,20 @@ import { TiFlashOutline } from "react-icons/ti";
 import { PiFlowerLotusLight } from "react-icons/pi";
 import { products, drugscart } from "/src/data/datas.js";
 import ProductCard from "./components/ProductCard";
-import ProductList from "./components/CategoryCard";
 import DrugList from "./components/CategoryCard";
 import SwiperSlideList from "./components/HeaderSwiper";
+import PharmacySection from "./components/Footer";
 function HomePage() {
   return (
     <div className="container">
       <div className="mx-auto px-4 py-6">
         <div className="py-4 bg-white mx-auto flex items-center gap-10 border-b px-10">
           <a href="">
-            <img src="https://www.gopharm.uz/_nuxt/logo.DL0qhU9d.svg" alt="" />
+            <img
+              src="https://www.gopharm.uz/_nuxt/logo.DL0qhU9d.svg"
+              alt=""
+              className="shrink-0"
+            />
           </a>
           <a
             href="#"
@@ -175,7 +179,13 @@ function HomePage() {
             <DrugList key={product.id} item={product} />
           ))}
         </div>
+        <div className="flex justify-center">
+          <button className="flex justify-center items-center gap-2 bg-white text-gray-500 py-2 px-4 rounded-lg text-sm leading-6 font-semibold ring-1 ring-inset ring-gray-200">
+            Смотреть все
+          </button>
+        </div>
       </section>
+      <PharmacySection />
     </div>
   );
 }
