@@ -1,197 +1,300 @@
-import React from 'react';
-import ProductCard from '../components/ProductCard';
-import CategoryCard from '../components/CategoryCard';
-
-const featuredProducts = [
-  {
-    id: 1,
-    name: "Нурофен Экспресс форте капс. 400мг №10",
-    price: 359,
-    oldPrice: 429,
-    discount: 16,
-    rating: 4.8,
-    reviewCount: 124,
-    image: "/images/products/nurofen.png"
-  },
-  {
-    id: 2,
-    name: "Терафлю порошок от гриппа и простуды №10 лимон",
-    price: 549,
-    oldPrice: 699,
-    discount: 21,
-    rating: 4.6,
-    reviewCount: 98,
-    image: "/images/products/theraflu.png"
-  },
-  {
-    id: 3,
-    name: "Супрадин таблетки шипучие №10",
-    price: 799,
-    oldPrice: 0,
-    discount: 0,
-    rating: 4.9,
-    reviewCount: 156,
-    image: "/images/products/supradyn.png"
-  },
-  {
-    id: 4,
-    name: "Компливит таблетки п.о №60",
-    price: 299,
-    oldPrice: 349,
-    discount: 14,
-    rating: 4.7,
-    reviewCount: 87,
-    image: "/images/products/complivit.png"
-  }
-];
-
-const categories = [
-  { id: 1, name: "Обезболивающие", image: "/images/categories/painkillers.png" },
-  { id: 2, name: "Антибиотики", image: "/images/categories/antibiotics.png" },
-  { id: 3, name: "Витамины", image: "/images/categories/vitamins.png" },
-  { id: 4, name: "Простуда и грипп", image: "/images/categories/cold-flu.png" },
-  { id: 5, name: "Аллергия", image: "/images/categories/allergy.png" },
-  { id: 6, name: "Желудок и кишечник", image: "/images/categories/stomach.png" }
-];
-
-const HomePage = () => {
+import React from "react";
+import { products, drugscart } from "/src/data/datas.js";
+import ProductCard from "/src/components/ProductCard.jsx";
+import DrugList from "/src/components/CategoryCard.jsx";
+import SwiperSlideList from "/src/components/HeaderSwiper.jsx";
+import { PiPillLight } from "react-icons/pi";
+import { TiFlashOutline } from "react-icons/ti";
+import { PiFlowerLotusLight } from "react-icons/pi";
+import {
+  FaHandHoldingHeart,
+  FaTruck,
+  FaWallet,
+  FaThLarge,
+} from "react-icons/fa";
+function Section() {
   return (
-    <div className="container mx-auto px-4 py-6">
-      <div className="bg-[#E6F0FF] rounded-lg p-6 mb-8">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-6 md:mb-0">
-            <h1 className="text-3xl font-bold text-gray-800 mb-4">Интернет-аптека с доставкой на дом</h1>
-            <p className="text-gray-600 mb-6">Широкий ассортимент лекарств, витаминов и товаров для здоровья с быстрой доставкой</p>
-            <button className="bg-[#4285F4] text-white px-6 py-3 rounded-full font-medium">
-              Смотреть каталог
-            </button>
-          </div>
-          <div className="md:w-1/2 flex justify-center">
-            <img 
-              src="/images/banner-image.png" 
-              alt="GoPharm Banner" 
-              className="max-h-64 object-contain"
-            />
-          </div>
+    <div className="container">
+      <div className="space-y-10 mx-auto px-10 pt-10">
+        <div className="flex  gap-4">
+          <a
+            href="/catalog/lekarstvennye-preparaty"
+            className="flex flex-col gap-3 items-center flex-1 undefined"
+          >
+            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
+              <PiPillLight alt="547" className="text-[30px]" />
+            </span>
+            <span className="text-center text-sm">Лекарственные препараты</span>
+          </a>
+          <a
+            href="/catalog/lekarstvennye-preparaty"
+            className="flex flex-col gap-3 items-center flex-1 undefined"
+          >
+            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
+              <TiFlashOutline alt="547" className="text-[30px]" />
+            </span>
+            <span className="text-center text-sm">Витамины и БАДы</span>
+          </a>
+          <a
+            href="/catalog/lekarstvennye-preparaty"
+            className="flex flex-col gap-3 items-center flex-1 undefined"
+          >
+            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
+              <PiFlowerLotusLight alt="547" className="text-[30px]" />
+            </span>
+            <span className="text-center text-sm">Фитопрепараты</span>
+          </a>
+          <a
+            href="/catalog/lekarstvennye-preparaty"
+            className="flex flex-col gap-3 items-center flex-1 undefined"
+          >
+            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
+              <FaHandHoldingHeart alt="547" className="text-[30px]" />
+            </span>
+            <span className="text-center text-sm">Планирование семьи</span>
+          </a>
+          <a
+            href="/catalog/lekarstvennye-preparaty"
+            className="flex flex-col gap-3 items-center flex-1 undefined"
+          >
+            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
+              <img
+                src="https://api2.gopharm.uz/storage/products/category/image/01HW8MSF33FBEK0AY8XQ28WW1J.svg"
+                alt="547"
+                className="text-[30px]"
+              />
+            </span>
+            <span className="text-center text-sm">Мама и малыш</span>
+          </a>
+          <a
+            href="/catalog/lekarstvennye-preparaty"
+            className="flex flex-col gap-3 items-center flex-1 undefined"
+          >
+            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
+              <img
+                src="https://api2.gopharm.uz/storage/products/category/image/01HW8NESVZMDTAWA3XPW5QFD7G.svg"
+                alt="547"
+                className="text-[30px]"
+              />
+            </span>
+            <span className="text-center text-sm">Медицинские изделия</span>
+          </a>
+          <a
+            href="/catalog/lekarstvennye-preparaty"
+            className="flex flex-col gap-3 items-center flex-1 undefined"
+          >
+            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
+              <img
+                src="https://api2.gopharm.uz/storage/products/category/image/01HW8N13KXAW66MPJW4XZJCVAN.svg"
+                alt="547"
+                className="text-[30px]"
+              />
+            </span>
+            <span className="text-center text-sm">Приборы медицинские</span>
+          </a>
+          <a
+            href="/catalog/lekarstvennye-preparaty"
+            className="flex flex-col gap-3 items-center flex-1 undefined"
+          >
+            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
+              <img
+                src="https://api2.gopharm.uz/storage/products/category/image/01HW8MH5N75JX0EGNWEK7T4NWV.svg"
+                alt="547"
+                className="text-[30px]"
+              />
+            </span>
+            <span className="text-center text-sm">Гигиена, красота и уход</span>
+          </a>
         </div>
       </div>
-      
-      {/* Categories */}
-      <div className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">Категории</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-          {categories.map(category => (
-            <CategoryCard key={category.id} category={category} />
-          ))}
+      {/* <div className="flex flex-col gap-6 p-4">
+          <div className="grid grid-cols-2 gap-2">
+            <a
+              href="/catalog/lekarstvennye-preparaty"
+              className="flex border rounded-lg overflow-hidden border-gray-200"
+            >
+              <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
+                <PiPillLight alt="547" className="text-[30px]" />
+              </span>
+              <span className="text-xs p-2 flex items-center leading-tight">
+                Лекарственные препараты
+              </span>
+            </a>
+            <a
+              href="/catalog/lekarstvennye-preparaty"
+              className="flex border rounded-lg overflow-hidden border-gray-200"
+            >
+              <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
+                <TiFlashOutline alt="547" className="text-[30px]" />
+              </span>
+              <span className="text-xs p-2 flex items-center leading-tight">
+                Витамины и БАДы
+              </span>
+            </a>
+            <a
+              href="/catalog/lekarstvennye-preparaty"
+              className="flex border rounded-lg overflow-hidden border-gray-200"
+            >
+              <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
+                <PiFlowerLotusBold alt="547" className="text-[30px]" />
+              </span>
+              <span className="text-xs p-2 flex items-center leading-tight">
+                Фитопрепараты
+              </span>
+            </a>
+            <a
+              href="/catalog/lekarstvennye-preparaty"
+              className="flex border rounded-lg overflow-hidden border-gray-200"
+            >
+              <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
+                <FaHandHoldingHeart alt="547" className="text-[30px]" />
+              </span>
+              <span className="text-xs p-2 flex items-center leading-tight">
+                Планирование семьи
+              </span>
+            </a>
+            <a
+              href="/catalog/lekarstvennye-preparaty"
+              className="flex border rounded-lg overflow-hidden border-gray-200"
+            >
+              <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
+                <img
+                  src="https://api2.gopharm.uz/storage/products/category/image/01HW8MSF33FBEK0AY8XQ28WW1J.svg"
+                  alt="547"
+                  className="text-[30px]"
+                />
+              </span>
+              <span className="text-xs p-2 flex items-center leading-tight">
+                Мама и малыш
+              </span>
+            </a>
+            <a
+              href="/catalog/lekarstvennye-preparaty"
+              className="flex border rounded-lg overflow-hidden border-gray-200"
+            >
+              <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
+                <img
+                  src="https://api2.gopharm.uz/storage/products/category/image/01HW8NESVZMDTAWA3XPW5QFD7G.svg"
+                  alt="547"
+                  className="text-[30px]"
+                />
+              </span>
+              <span className="text-xs p-2 flex items-center leading-tight">
+                Медицинские изделия
+              </span>
+            </a>
+            <a
+              href="/catalog/lekarstvennye-preparaty"
+              className="flex border rounded-lg overflow-hidden border-gray-200"
+            >
+              <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
+                <img
+                  src="https://api2.gopharm.uz/storage/products/category/image/01HW8N13KXAW66MPJW4XZJCVAN.svg"
+                  alt="547"
+                  className="text-[30px]"
+                />
+              </span>
+              <span className="text-xs p-2 flex items-center leading-tight">
+                Приборы медицинские
+              </span>
+            </a>
+            <a
+              href="/catalog/lekarstvennye-preparaty"
+              className="flex border rounded-lg overflow-hidden border-gray-200"
+            >
+              <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
+                <img
+                  src="https://api2.gopharm.uz/storage/products/category/image/01HW8MH5N75JX0EGNWEK7T4NWV.svg"
+                  alt="547"
+                  className="text-[30px]"
+                />
+              </span>
+              <span className="text-xs p-2 flex items-center leading-tight">
+                Гигиена, красота и уход
+              </span>
+            </a>
+          </div>
+        </div> */}
+      <section className="flex flex-col gap-10">
+        <SwiperSlideList />
+        <div className="flex justify-between items-baseline">
+          <h2 className="font-semibold text-3xl">Популярные препараты</h2>
+          <a href="/collection/popular" className="text-blue-500 text-sm">
+            Смотреть все
+          </a>
         </div>
-      </div>
-      
-      {/* Featured Products */}
-      <div className="mb-10">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-gray-800">Популярные товары</h2>
-          <a href="#" className="text-[#4285F4] font-medium">Смотреть все</a>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {featuredProducts.map(product => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+          {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-      </div>
-      
-      {/* Promotions */}
-      <div className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">Акции и скидки</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-[#FFF4E6] rounded-lg p-6">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="md:w-1/2 mb-4 md:mb-0">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Скидка 20% на витамины</h3>
-                <p className="text-gray-600 mb-4">Укрепите иммунитет с выгодой</p>
-                <button className="bg-[#FF9500] text-white px-4 py-2 rounded-full font-medium">
-                  Подробнее
-                </button>
-              </div>
-              <div className="md:w-1/2 flex justify-center">
-                <img 
-                  src="/images/vitamins-promo.png" 
-                  alt="Vitamins Promotion" 
-                  className="max-h-40 object-contain"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="bg-[#E6FFF4] rounded-lg p-6">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="md:w-1/2 mb-4 md:mb-0">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Бесплатная доставка</h3>
-                <p className="text-gray-600 mb-4">При заказе от 2000 ₽</p>
-                <button className="bg-[#00C853] text-white px-4 py-2 rounded-full font-medium">
-                  Подробнее
-                </button>
-              </div>
-              <div className="md:w-1/2 flex justify-center">
-                <img 
-                  src="/images/delivery-promo.png" 
-                  alt="Delivery Promotion" 
-                  className="max-h-40 object-contain"
-                />
-              </div>
-            </div>
-          </div>
+        <div className="flex justify-center">
+          <button className="flex justify-center items-center gap-2 bg-white text-gray-500 py-2 px-4 rounded-lg text-sm leading-6 font-semibold ring-1 ring-inset ring-gray-200">
+            Смотреть все Популярные препараты
+          </button>
         </div>
-      </div>
-      <div className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">Почему выбирают нас</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="border border-gray-200 rounded-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <img 
-                src="/images/icons/quality.png" 
-                alt="Quality" 
-                className="w-16 h-16"
-              />
-            </div>
-            <h3 className="font-bold text-gray-800 mb-2">Гарантия качества</h3>
-            <p className="text-gray-600 text-sm">Все товары сертифицированы и проходят строгий контроль</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <img 
-                src="/images/icons/delivery.png" 
-                alt="Delivery" 
-                className="w-16 h-16"
-              />
-            </div>
-            <h3 className="font-bold text-gray-800 mb-2">Быстрая доставка</h3>
-            <p className="text-gray-600 text-sm">Доставляем заказы в день оформления или на следующий день</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <img 
-                src="/images/icons/price.png" 
-                alt="Price" 
-                className="w-16 h-16"
-              />
-            </div>
-            <h3 className="font-bold text-gray-800 mb-2">Низкие цены</h3>
-            <p className="text-gray-600 text-sm">Регулярные акции и скидки для наших клиентов</p>
-          </div>
-          <div className="border border-gray-200 rounded-lg p-6 text-center">
-            <div className="flex justify-center mb-4">
-              <img 
-                src="/images/icons/support.png" 
-                alt="Support" 
-                className="w-16 h-16"
-              />
-            </div>
-            <h3 className="font-bold text-gray-800 mb-2">Поддержка 24/7</h3>
-            <p className="text-gray-600 text-sm">Наши специалисты всегда готовы помочь вам с выбором</p>
-          </div>
+        <div className="flex justify-between items-baseline">
+          <h2 className="font-semibold text-3xl">Популярные препараты</h2>
+          <a href="/collection/popular" className="text-blue-500 text-sm">
+            Смотреть все
+          </a>
         </div>
-      </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+          {drugscart.map((product) => (
+            <DrugList key={product.id} item={product} />
+          ))}
+        </div>
+        <div className="flex justify-center">
+          <button className="flex justify-center items-center gap-2 bg-white text-gray-500 py-2 px-4 rounded-lg text-sm leading-6 font-semibold ring-1 ring-inset ring-gray-200">
+            Смотреть все
+          </button>
+        </div>
+        <main className="flex-grow">
+          <div className="container mx-auto px-4 py-8">
+            <h1 className="font-semibold text-3xl">
+              Почему стоит заказывать лекарства у нас?
+            </h1>
+            <div className="grid grid-cols-1 pt-[50px] md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                  <FaHandHoldingHeart className="text-white w-8 h-8" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Доверие</h3>
+                <p className="text-gray-700">
+                  Более 15 000 обслуженных и лояльных клиентов.
+                </p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                  <FaTruck className="text-white w-8 h-8" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Доставка</h3>
+                <p className="text-gray-700">Максимально в кратчайшее время.</p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                  <FaWallet className="text-white w-8 h-8" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Экономия</h3>
+                <p className="text-gray-700">
+                  Бонусные баллы - Покупайте и зарабатывайте.
+                </p>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                  <FaThLarge className="text-white w-8 h-8" />
+                </div>
+                <h3 className="font-bold text-lg mb-2">Широкий Ассортимент</h3>
+                <p className="text-gray-700">
+                  Более 12,000 наименований товаров.
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
     </div>
   );
-};
+}
 
-export default HomePage;
+export default Section;

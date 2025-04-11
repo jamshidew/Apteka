@@ -13,7 +13,7 @@ function SwiperSlideList() {
   ];
 
   return (
-    <div className="container w-full max-w-4xl mx-auto mt-10">
+    <div className="container w-full max-w-4xl mx-auto mt-10 pt-[30px]">
       <Swiper
         modules={[Autoplay]}
         loop

@@ -1,7 +1,6 @@
 import {
   FaFacebookF,
   FaInstagram,
-  FaVk,
   FaYoutube,
   FaTiktok,
   FaXTwitter,
@@ -13,14 +12,13 @@ const SocialIcons = () => {
     { icon: <BsTelegram />, link: "#" },
     { icon: <FaFacebookF />, link: "#" },
     { icon: <FaInstagram />, link: "#" },
-    { icon: <FaVk />, link: "#" },
     { icon: <FaYoutube />, link: "#" },
     { icon: <FaTiktok />, link: "#" },
     { icon: <FaXTwitter />, link: "#" },
   ];
 
   return (
-    <div className="flex items-center justify-center pl-5 gap-5">
+    <div className="flex items-center gap-2">
       {icons.map((item, index) => (
         <a
           href={item.link}
