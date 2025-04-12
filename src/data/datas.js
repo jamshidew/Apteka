@@ -80,8 +80,6 @@ export const products = [
     availability: true,
     delivery: "сегодня",
   },
-];
-export const drugscart = [
   {
     id: 1,
     img: "https://api.gopharm.uz/media/drugs-thumbnail/461a43d0-a0b5-4449-8ee4-a182bd6b018e.jpeg",

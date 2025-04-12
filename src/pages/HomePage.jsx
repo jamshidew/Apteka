@@ -1,5 +1,5 @@
 import React from "react";
-import { products, drugscart } from "/src/data/datas.js";
+import { products } from "/src/data/datas.js";
 import ProductCard from "/src/components/ProductCard.jsx";
 import DrugList from "/src/components/CategoryCard.jsx";
 import SwiperSlideList from "/src/components/HeaderSwiper.jsx";
@@ -240,7 +240,7 @@ function Section() {
           </a>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-          {drugscart.map((product) => (
+          {products.map((product) => (
             <DrugList key={product.id} item={product} />
           ))}
         </div>
