@@ -8,12 +8,19 @@ import Section from "./pages/HomePage.jsx";
 import ShoppingSearch from "./components/ShoppingCartList.jsx";
 import ShoppingCartList from "./components/ShoppingCart.jsx";
 import ProductDetail from "./pages/ProductPage.jsx";
+import { useState } from "react";
 function HomePage() {
+  const [cartDatas, setCartDatas] = useState([]);
   return (
     <>
-      <Header />
+      <Header cartDatas={cartDatas} />
       <Routes>
-        <Route path="/" element={<Section />} />
+        <Route
+          path="/"
+          element={
+            <Section cartDatas={cartDatas} setCartDatas={setCartDatas} />
+          }
+        />
         <Route path="/categories" element={<CategoryPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/cartitem" element={<ShoppingSearch />} />

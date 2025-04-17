@@ -72,7 +72,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 1,
+    id: 9,
     img: "https://api.gopharm.uz/media/drugs-thumbnail/461a43d0-a0b5-4449-8ee4-a182bd6b018e.jpeg",
     name: "Канефрон N таб.",
     price: 125100,
@@ -81,7 +81,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 2,
+    id: 10,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(21).webp",
     name: "Тивортин р-р 42мг/мл 100мл",
     price: 66600,
@@ -90,7 +90,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 3,
+    id: 11,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(35).webp",
     name: "Клинтопик гель 10мг/50мг 15г",
     price: 109700,
@@ -99,7 +99,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 4,
+    id: 12,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(36).webp",
     name: "Магне B6 форте таб. №40",
     price: 78000,
@@ -108,7 +108,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 5,
+    id: 13,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(37).webp",
     name: "Эссенциале форте H капс.№30",
     price: 160000,
@@ -117,7 +117,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 6,
+    id: 14,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(38).webp",
     name: "Хофитол таблетки №180",
     price: 169000,
@@ -126,7 +126,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 7,
+    id: 15,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(39).webp",
     name: "Бепантен мазь 5% 30г",
     price: 81800,
@@ -135,7 +135,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 8,
+    id: 16,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(42).webp",
     name: "Дюфастон таб. 10мг №20",
     price: 161000,
@@ -144,7 +144,7 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 9,
+    id: 17,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/dostineks-0.5mg-8tab.webp",
     name: "Достинекс таб. 0,5мг №8",
     price: 331300,
@@ -153,7 +153,7 @@ export const products = [
     delivery: "Доставка сегодня",
   },
   {
-    id: 10,
+    id: 18,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(44).webp",
     name: "Циклоферон амп. 2мл №5",
     price: 106600,
@@ -162,7 +162,7 @@ export const products = [
     delivery: "Доставка сегодня",
   },
   {
-    id: 11,
+    id: 19,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(45).webp",
     name: "Реосорбилакт р-р д/инф. 200мл",
     price: 52200,
@@ -171,7 +171,7 @@ export const products = [
     delivery: "Доставка сегодня",
   },
   {
-    id: 12,
+    id: 20,
     img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/item_photo%20-%201%20(46).webp",
     name: "Л-Лизина Эсцинат р-р д/ин. 1 мг/мл 5 мл №10",
     price: 180500,

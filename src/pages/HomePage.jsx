@@ -1,6 +1,5 @@
-import { products } from "/src/data/datas.js";
-import ProductCard from "/src/components/ProductCard.jsx";
-import SwiperSlideList from "/src/components/HeaderSwiper.jsx";
+import { products } from "../data/datas.js";
+import ProductCard from "../components/ProductCard.jsx";
 import { TiFlashOutline } from "react-icons/ti";
 import {
   PiFlowerLotusLight,
@@ -8,230 +7,77 @@ import {
   PiPillLight,
 } from "react-icons/pi";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import SwiperSlideList from "./../components/HeaderSwiper";
 import {
   FaHandHoldingHeart,
   FaTruck,
   FaWallet,
   FaThLarge,
 } from "react-icons/fa";
-function Section() {
+import CategoryLink from "../components/CategoryLink.jsx";
+import CategoryLinkLaptop from "../components/CategoryLinkLaptop.jsx";
+function Section({ setCartDatas, cartDatas }) {
+  const categDatas = [
+    {
+      id: 1,
+      name: "Лекарственные препараты",
+      Icon: PiPillLight,
+    },
+    {
+      id: 2,
+      name: "Витамины и БАДы",
+      Icon: TiFlashOutline,
+    },
+    {
+      id: 3,
+      name: "Фитопрепараты",
+      Icon: PiFlowerLotusBold,
+    },
+    {
+      id: 4,
+      name: "Планирование семьи",
+      Icon: FaHandHoldingHeart,
+    },
+    {
+      id: 5,
+      name: "Мама и малыш",
+      image:
+        "https://api2.gopharm.uz/storage/products/category/image/01HW8MSF33FBEK0AY8XQ28WW1J.svg",
+    },
+    {
+      id: 6,
+      name: "Медицинские изделия",
+      image:
+        "https://api2.gopharm.uz/storage/products/category/image/01HW8NESVZMDTAWA3XPW5QFD7G.svg",
+    },
+    {
+      id: 7,
+      name: "Приборы медицинские",
+      image:
+        "https://api2.gopharm.uz/storage/products/category/image/01HW8N13KXAW66MPJW4XZJCVAN.svg",
+    },
+    {
+      id: 8,
+      name: "Гигиена, красота и уход",
+      image:
+        "https://api2.gopharm.uz/storage/products/category/image/01HW8MH5N75JX0EGNWEK7T4NWV.svg",
+    },
+  ];
   return (
     <div className="container">
       <div className="space-y-10 hidden lg:block mx-auto px-10 pt-10">
         <div className="flex  gap-4">
-          <a
-            href="/categories"
-            className="flex flex-col gap-3 items-center flex-1 undefined"
-          >
-            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-              <PiPillLight alt="547" className="text-[30px]" />
-            </span>
-            <span className="text-center text-sm">Лекарственные препараты</span>
-          </a>
-          <a
-            href="/categories"
-            className="flex flex-col gap-3 items-center flex-1 undefined"
-          >
-            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-              <TiFlashOutline alt="547" className="text-[30px]" />
-            </span>
-            <span className="text-center text-sm">Витамины и БАДы</span>
-          </a>
-          <a
-            href="/categories"
-            className="flex flex-col gap-3 items-center flex-1 undefined"
-          >
-            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-              <PiFlowerLotusLight alt="547" className="text-[30px]" />
-            </span>
-            <span className="text-center text-sm">Фитопрепараты</span>
-          </a>
-          <a
-            href="/categories"
-            className="flex flex-col gap-3 items-center flex-1 undefined"
-          >
-            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-              <FaHandHoldingHeart alt="547" className="text-[30px]" />
-            </span>
-            <span className="text-center text-sm">Планирование семьи</span>
-          </a>
-          <a
-            href="/categories"
-            className="flex flex-col gap-3 items-center flex-1 undefined"
-          >
-            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-              <img
-                src="https://api2.gopharm.uz/storage/products/category/image/01HW8MSF33FBEK0AY8XQ28WW1J.svg"
-                alt="547"
-                className="text-[30px]"
-              />
-            </span>
-            <span className="text-center text-sm">Мама и малыш</span>
-          </a>
-          <a
-            href="/categories"
-            className="flex flex-col gap-3 items-center flex-1 undefined"
-          >
-            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-              <img
-                src="https://api2.gopharm.uz/storage/products/category/image/01HW8NESVZMDTAWA3XPW5QFD7G.svg"
-                alt="547"
-                className="text-[30px]"
-              />
-            </span>
-            <span className="text-center text-sm">Медицинские изделия</span>
-          </a>
-          <a
-            href="/categories"
-            className="flex flex-col gap-3 items-center flex-1 undefined"
-          >
-            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-              <img
-                src="https://api2.gopharm.uz/storage/products/category/image/01HW8N13KXAW66MPJW4XZJCVAN.svg"
-                alt="547"
-                className="text-[30px]"
-              />
-            </span>
-            <span className="text-center text-sm">Приборы медицинские</span>
-          </a>
-          <a
-            href="/categories"
-            className="flex flex-col gap-3 items-center flex-1 undefined"
-          >
-            <span className="flex bg-blue-50 p-4 rounded-full text-blue-500">
-              <img
-                src="https://api2.gopharm.uz/storage/products/category/image/01HW8MH5N75JX0EGNWEK7T4NWV.svg"
-                alt="547"
-                className="text-[30px]"
-              />
-            </span>
-            <span className="text-center text-sm">Гигиена, красота и уход</span>
-          </a>
+          {categDatas.map((categData) => {
+            return <CategoryLinkLaptop data={categData} key={categData.id} />;
+          })}
         </div>
       </div>
-      <div className="flex lg:hidden md:block items-center justify-between p-4 gap-2 bg-white border-b">
-        <div>
-          <a
-            href=""
-            className="flex justify-center items-center gap-2 bg-white text-gray-500 py-2 px-3 rounded-lg text-sm leading-6 font-semibold ring-1 ring-inset ring-gray-200 min-h-10"
-          >
-            <FaArrowLeftLong />
-          </a>
-        </div>
-        <div className="grow">
-          <input
-            type="text"
-            className="block w-full rounded-lg border-0 p-2 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-blue-500 leading-6"
-            placeholder="Dorilarni qidirish"
-          />
-        </div>
-      </div>
+
       <div className="flex  lg:hidden flex-col gap-6 p-4">
         <div className="grid grid-cols-2 gap-2">
-          <a
-            href="/categories"
-            className="flex border rounded-lg overflow-hidden border-gray-200"
-          >
-            <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
-              <PiPillLight alt="547" className="text-[30px]" />
-            </span>
-            <span className="text-xs p-2 flex items-center leading-tight">
-              Лекарственные препараты
-            </span>
-          </a>
-          <a
-            href="/categories"
-            className="flex border rounded-lg overflow-hidden border-gray-200"
-          >
-            <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
-              <TiFlashOutline alt="547" className="text-[30px]" />
-            </span>
-            <span className="text-xs p-2 flex items-center leading-tight">
-              Витамины и БАДы
-            </span>
-          </a>
-          <a
-            href="/categories"
-            className="flex border rounded-lg overflow-hidden border-gray-200"
-          >
-            <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
-              <PiFlowerLotusBold alt="547" className="text-[30px]" />
-            </span>
-            <span className="text-xs p-2 flex items-center leading-tight">
-              Фитопрепараты
-            </span>
-          </a>
-          <a
-            href="/categories"
-            className="flex border rounded-lg overflow-hidden border-gray-200"
-          >
-            <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
-              <FaHandHoldingHeart alt="547" className="text-[30px]" />
-            </span>
-            <span className="text-xs p-2 flex items-center leading-tight">
-              Планирование семьи
-            </span>
-          </a>
-          <a
-            href="/categories"
-            className="flex border rounded-lg overflow-hidden border-gray-200"
-          >
-            <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
-              <img
-                src="https://api2.gopharm.uz/storage/products/category/image/01HW8MSF33FBEK0AY8XQ28WW1J.svg"
-                alt="547"
-                className="text-[30px]"
-              />
-            </span>
-            <span className="text-xs p-2 flex items-center leading-tight">
-              Мама и малыш
-            </span>
-          </a>
-          <a
-            href="/categories"
-            className="flex border rounded-lg overflow-hidden border-gray-200"
-          >
-            <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
-              <img
-                src="https://api2.gopharm.uz/storage/products/category/image/01HW8NESVZMDTAWA3XPW5QFD7G.svg"
-                alt="547"
-                className="text-[30px]"
-              />
-            </span>
-            <span className="text-xs p-2 flex items-center leading-tight">
-              Медицинские изделия
-            </span>
-          </a>
-          <a
-            href="/categories"
-            className="flex border rounded-lg overflow-hidden border-gray-200"
-          >
-            <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
-              <img
-                src="https://api2.gopharm.uz/storage/products/category/image/01HW8N13KXAW66MPJW4XZJCVAN.svg"
-                alt="547"
-                className="text-[30px]"
-              />
-            </span>
-            <span className="text-xs p-2 flex items-center leading-tight">
-              Приборы медицинские
-            </span>
-          </a>
-          <a
-            href="/categories"
-            className="flex border rounded-lg overflow-hidden border-gray-200"
-          >
-            <span className="flex bg-blue-50 p-3 text-blue-500 items-center shrink-0">
-              <img
-                src="https://api2.gopharm.uz/storage/products/category/image/01HW8MH5N75JX0EGNWEK7T4NWV.svg"
-                alt="547"
-                className="text-[30px]"
-              />
-            </span>
-            <span className="text-xs p-2 flex items-center leading-tight">
-              Гигиена, красота и уход
-            </span>
-          </a>
+          {categDatas.map((categData) => {
+            return <CategoryLink key={categData.id} data={categData} />;
+          })}
         </div>
       </div>
       <section className="flex flex-col gap-10">
@@ -244,7 +90,12 @@ function Section() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              cartDatas={cartDatas}
+              setCartDatas={setCartDatas}
+              key={product.id}
+              product={product}
+            />
           ))}
         </div>
         <div className="flex justify-center">
@@ -260,7 +111,12 @@ function Section() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              cartDatas={cartDatas}
+              setCartDatas={setCartDatas}
+              key={product.id}
+              product={product}
+            />
           ))}
         </div>
         <div className="flex justify-center">

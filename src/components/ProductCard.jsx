@@ -1,4 +1,4 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, setCartDatas, cartDatas }) => {
   return (
     <div className="border p-4 rounded-lg bg-white flex border-[#e5e7eb] flex-col">
       <img
@@ -12,7 +12,11 @@ const ProductCard = ({ product }) => {
         <p className="text-xs text-gray-400 ">{product.manufacturer}</p>
       </div>
       <button
-        onClick={() => {}}
+        onClick={() => {
+          setCartDatas((prev) => {
+            return [...prev, product];
+          });
+        }}
         className="mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
       >
         В корзину
