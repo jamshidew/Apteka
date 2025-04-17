@@ -72,15 +72,6 @@ export const products = [
     delivery: "сегодня",
   },
   {
-    id: 9,
-    img: "https://api2.gopharm.uz/storage/products/drug/image_thumbnail/teraflu-vkus-limona-10pak.webp",
-    name: "Дюфастон таб. 10мг №20",
-    price: "161 000 сум",
-    manufacturer: "Эббот, Франция",
-    availability: true,
-    delivery: "сегодня",
-  },
-  {
     id: 1,
     img: "https://api.gopharm.uz/media/drugs-thumbnail/461a43d0-a0b5-4449-8ee4-a182bd6b018e.jpeg",
     name: "Канефрон N таб.",

@@ -14,9 +14,7 @@ const DrugList = ({ item }) => {
         <h2 className="line-clamp-3 text-sm break-words">{item.name}</h2>
         <p className="text-xs text-gray-400">{item.manufacturer}</p>
       </div>
-      <button className="mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-        В корзину
-      </button>
+      <AddToCartButton />
       <div className="flex flex-wrap justify-center gap-4 items-center mt-3">
         <p className="text-green-500">
           {item.availability ? "В наличии" : "Нет в наличии"}

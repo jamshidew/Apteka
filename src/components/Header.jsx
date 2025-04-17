@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="container">
+    <div className="container hidden lg:block">
       <div className="mx-auto px-4 py-6">
         <div className="py-4 bg-white mx-auto flex items-center gap-10 border-b px-10">
           <Link to={`/`}>
@@ -35,7 +35,7 @@ function Header() {
             <span className="truncate block w-full text-center">Войти</span>
           </Link>
           <a
-            href="/cart"
+            href="/shoppingcart"
             className="flex flex-col gap-0.5 font-semibold text-sm text-blue-500 items-center relative"
           >
             <div className="absolute -top-2 -right-2">
