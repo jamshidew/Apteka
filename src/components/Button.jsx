@@ -27,7 +27,6 @@ function AddToCartButton() {
     if (quantity > 1) {
       setQuantity((prev) => prev - 1);
     } else {
-      // If quantity becomes 0, revert to "Add to cart" button
       setIsInCart(false);
     }
   };

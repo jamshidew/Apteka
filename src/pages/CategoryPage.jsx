@@ -1,11 +1,4 @@
 import {
-  FaBaby,
-  FaFlask,
-  FaHeartbeat,
-  FaStethoscope,
-  FaToilet,
-} from "react-icons/fa";
-import {
   PiFlowerLotusLight,
   PiFlowerLotusBold,
   PiPillLight,
@@ -94,7 +87,10 @@ function CategoryPage() {
         <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
           <div className="flex flex-col items-center mb-3">
             <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 mb-2">
-              <img src="https://api2.gopharm.uz/storage/products/category/image/01HW8PD9GY6RB60SQJM7G30ZS3.svg" className="w-6 h-6" />
+              <img
+                src="https://api2.gopharm.uz/storage/products/category/image/01HW8PD9GY6RB60SQJM7G30ZS3.svg"
+                className="w-6 h-6"
+              />
             </div>
             <h3 className="text-center font-medium">Планирование семьи</h3>
           </div>
@@ -288,7 +284,7 @@ function CategoryPage() {
                 href="#"
                 className="text-gray-600 hover:text-blue-500 text-sm block py-0.5"
               >
-                Тонометры  и Стетоскопы
+                Тонометры и Стетоскопы
               </a>
             </li>
           </ul>

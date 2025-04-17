@@ -2,7 +2,11 @@ import { products } from "/src/data/datas.js";
 import ProductCard from "/src/components/ProductCard.jsx";
 import SwiperSlideList from "/src/components/HeaderSwiper.jsx";
 import { TiFlashOutline } from "react-icons/ti";
-import { PiFlowerLotusLight, PiFlowerLotusBold, PiPillLight } from "react-icons/pi";
+import {
+  PiFlowerLotusLight,
+  PiFlowerLotusBold,
+  PiPillLight,
+} from "react-icons/pi";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import {
   FaHandHoldingHeart,
@@ -115,7 +119,11 @@ function Section() {
           </a>
         </div>
         <div className="grow">
-          <input type="text" className="block w-full rounded-lg border-0 p-2 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-blue-500 leading-6" placeholder="Dorilarni qidirish" />
+          <input
+            type="text"
+            className="block w-full rounded-lg border-0 p-2 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-blue-500 leading-6"
+            placeholder="Dorilarni qidirish"
+          />
         </div>
       </div>
       <div className="flex  lg:hidden flex-col gap-6 p-4">
