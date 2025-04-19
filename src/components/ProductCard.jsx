@@ -1,4 +1,6 @@
-const ProductCard = ({ product, setCartDatas, cartDatas }) => {
+import CartButton from "/src/components/CartButton.jsx";
+
+const ProductCard = ({ product }) => {
   return (
     <div className="border p-4 rounded-lg bg-white flex border-[#e5e7eb] flex-col">
       <img
@@ -11,16 +13,11 @@ const ProductCard = ({ product, setCartDatas, cartDatas }) => {
         <h2 className="line-clamp-3 text-sm break-words">{product.name}</h2>
         <p className="text-xs text-gray-400 ">{product.manufacturer}</p>
       </div>
-      <button
-        onClick={() => {
-          setCartDatas((prev) => {
-            return [...prev, product];
-          });
-        }}
-        className="mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-      >
-        В корзину
-      </button>
+
+      <div className="mt-4">
+        <CartButton product={product} />
+      </div>
+
       <div className="flex flex-wrap justify-center gap-4 items-center mt-3">
         <p className="text-green-500">
           {product.availability ? "В наличии" : "Нет в наличии"}

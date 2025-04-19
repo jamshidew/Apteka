@@ -24,8 +24,11 @@ function HomePage() {
         <Route path="/categories" element={<CategoryPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/cartitem" element={<ShoppingSearch />} />
-        <Route path="/shoppingcart" element={<ShoppingCartList />} />
-        <Route path="/cart" element={<ProductDetail />} product={products} />
+        <Route
+          path="/shoppingcart"
+          element={<ShoppingCartList cartDatas={cartDatas} />}
+        />
+        <Route path="/cart" element={<ProductDetail />} />
       </Routes>
       <Footer />
     </>
