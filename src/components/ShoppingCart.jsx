@@ -1,80 +1,39 @@
-import { FiPlus, FiMinus } from "react-icons/fi";
-function ShoppingCartList({ cartDatas }) {
+
+const ProductCard = ({ product, setCartDatas, cartDatas }) => {
+  const { cartDatas, setCartDatas } = useContext(CartContext);
+  let isProductHasCart = cartDatas?.find((cartData) => cartData.id === data.id);
+  const [isCart, setIsCart] = useState(isProductHasCart);
   return (
-    <div className="container flex justify-between max-w-3xl mx-auto p-4">
-      <div>
-        <h1 className="text-2xl font-bold mb-6">Корзина: {cartDatas.length}</h1>
-        <div className="space-y-4">
-          {cartDatas.map((cartDatas) => (
-            <div
-              key={cartDatas.id}
-              className="border rounded-lg p-4 flex items-center gap-4"
-            >
-              <div className="w-24 h-24 flex-shrink-0">
-                <img
-                  src={cartDatas.img || "/placeholder.svg"}
-                  alt={cartDatas.name}
-                  width={100}
-                  height={100}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-
-              <div className="flex-grow">
-                <h3 className="font-medium text-lg">{cartDatas.name}</h3>
-                <p className="text-gray-500 text-sm">
-                  {cartDatas.manufacturer}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => updateQuantity(cartDatas.id, -1)}
-                  className="w-10 h-10 flex items-center justify-center bg-blue-500 text-white rounded-lg"
-                >
-                  <FiMinus size={20} />
-                </button>
-
-                <input
-                  type="text"
-                  value={quantities[cartDatas.id] || 1}
-                  readOnly
-                  className="w-10 h-10 text-center border rounded-lg"
-                />
-
-                <button
-                  onClick={() => updateQuantity(cartDatas.id, 1)}
-                  className="w-10 h-10 flex items-center justify-center bg-blue-500 text-white rounded-lg"
-                >
-                  <FiPlus size={20} />
-                </button>
-              </div>
-
-              <div className="text-right min-w-[120px] font-medium">
-                {(
-                  cartDatas.price * (quantities[cartDatas.id] || 1)
-                ).toLocaleString()}{" "}
-                сум
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="border p-4 rounded-lg bg-white flex border-[#e5e7eb] flex-col">
+      <img
+        src={product.img}
+        alt={product.name}
+        className="w-70 h-70 object-contain"
+      />
+      <p className="text-2xl font-semibold">от {product.price} сум</p>
+      <div className="flex flex-col gap-1 min-h-20 pt-3">
+        <h2 className="line-clamp-3 text-sm break-words">{product.name}</h2>
+        <p className="text-xs text-gray-400 ">{product.manufacturer}</p>
       </div>
-
-      <div className="mt-8 border-t w-[300px] ml-8 pt-4">
-        <div className="flex justify-between items-center">
-          <h2 className="text-xl font-bold">Умумий:</h2>
-          <div className="text-xl font-bold">{cartDatas.toLocaleString()} сум</div>
-        </div>
-
-        <div className="mt-4">
-          <button className="w-full bg-green-500 text-white py-3 rounded-lg font-medium hover:bg-green-600 transition-colors">
-            Буюртма бериш
-          </button>
-        </div>
+      <button
+        onClick={() => {
+          setIsCart(true);
+          setCartDatas((prev) => [...prev, { ...data, quantity: 1 }]);
+        }}
+        className="px-2 border min-h-[40px] hover:bg-[#FF6633] hover:text-white hover:border-transparent border-[#70C05B] rounded-[4px] text-base text-[#70C05B]"
+      >
+        Savatga qo'shish
+      </button>
+      <div className="flex flex-wrap justify-center gap-4 items-center mt-3">
+        <p className="text-green-500">
+          {product.availability ? "В наличии" : "Нет в наличии"}
+        </p>
+        <p className="text-xs text-gray-400 font-medium">
+          Доставка {product.delivery}
+        </p>
       </div>
     </div>
   );
-}
+};
 
-export default ShoppingCartList;
+export default ProductCard;

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { products } from "/src/data/datas.js";
-import ShoppingCartList from "./ShoppingCart";
 
 export default function ShoppingCart() {
   const [quantities, setQuantities] = useState({
