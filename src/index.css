@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  padding-inline: 15px;
+  margin: auto;
+}
+input {
+  outline: blue;
+}
+button {
+  cursor: pointer;
+}

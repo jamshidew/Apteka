@@ -23,7 +23,7 @@ const CartButton = ({ product }) => {
     return (
       <button
         onClick={() => setQuantity(1)}
-        className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+        className="flex w-full justify-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
       >
         В корзину
       </button>
@@ -31,7 +31,7 @@ const CartButton = ({ product }) => {
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center justify-between">
       <button
         onClick={() => setQuantity(quantity - 1)}
         className="w-10 h-10 bg-blue-500 text-white text-lg rounded-md"

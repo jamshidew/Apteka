@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Header({ cartDatas }) {
   return (
     <div className="container ">
-      <div className="mx-auto px-4 py-6 hidden lg:block">
+      <div className="mx-auto px-4 py-3 hidden lg:block">
         <div className="py-4 bg-white mx-auto flex items-center gap-10 border-b px-10">
           <Link to={`/`}>
             <img
