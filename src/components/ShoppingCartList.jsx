@@ -24,4 +24,6 @@ export default function ShoppingCart() {
 
     setTotal(newTotal);
   }, [quantities]);
+
+  // return <ShoppingCartList />;
 }

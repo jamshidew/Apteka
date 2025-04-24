@@ -1,10 +1,14 @@
 import { useState, useEffect, useContext } from "react";
 import { CartContext } from "../context/CartContext.jsx";
+import { useState, useEffect } from "react";
 
 const CartButton = ({ product }) => {
   const { cartDatas, setCartDatas } = useContext(CartContext);
     const existing = cartDatas.find((item) => item.id === product.id);
     const [quantity, setQuantity] = useState(existing?.quantity || 0);
+const CartButton = ({ product, cartDatas, setCartDatas }) => {
+  const existing = cartDatas.find((item) => item.id === product.id);
+  const [quantity, setQuantity] = useState(existing?.quantity || 0);
 
   useEffect(() => {
     if (quantity === 0) {
