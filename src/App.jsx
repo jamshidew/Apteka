@@ -7,10 +7,15 @@ import LoginPage from "./pages/LoginPage.jsx";
 import Section from "./pages/HomePage.jsx";
 import ShoppingSearch from "./components/ShoppingCartList.jsx";
 import ProductDetail from "./pages/ProductPage.jsx";
-import { useState } from "react";
-import ShoppingCart from "./components/ShoppingCartList.jsx";
+import { useEffect, useState } from "react";
+import CartPage from "./pages/CartPage.jsx";
 function HomePage() {
-  const [cartDatas, setCartDatas] = useState([]);
+  const [cartDatas, setCartDatas] = useState(
+    JSON.parse(localStorage.getItem("cartDatas")) || []
+  );
+  useEffect(() => {
+    localStorage.setItem("cartDatas", JSON.stringify(cartDatas));
+  }, [cartDatas]);
   return (
     <>
       <Header cartDatas={cartDatas} />
@@ -26,7 +31,9 @@ function HomePage() {
         <Route path="/cartitem" element={<ShoppingSearch />} />
         <Route
           path="/shoppingcart"
-          element={<ShoppingCart cartDatas={cartDatas} />}
+          element={
+            <CartPage cartDatas={cartDatas} setCartDatas={setCartDatas} />
+          }
         />
         <Route path="/cart" element={<ProductDetail products={products} />} />
       </Routes>

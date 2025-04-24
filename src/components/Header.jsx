@@ -34,8 +34,8 @@ function Header({ cartDatas }) {
             <MdPerson className="w-[20px] h-[20px]" />
             <span className="truncate block w-full text-center">Войти</span>
           </Link>
-          <a
-            href="/shoppingcart"
+          <Link
+            to="/shoppingcart"
             className="flex flex-col gap-0.5 font-semibold text-sm text-blue-500 items-center relative"
           >
             {cartDatas.length != 0 && (
@@ -46,7 +46,7 @@ function Header({ cartDatas }) {
               </div>
             )}
             <FaCartShopping className="w-[20px] h-[20px]" /> Корзина
-          </a>
+          </Link>
         </div>
       </div>
       <div className="flex lg:hidden md:block items-center justify-between p-4 gap-2 bg-white border-b">

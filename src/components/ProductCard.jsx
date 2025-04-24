@@ -1,6 +1,6 @@
-import CartButton from "/src/components/CartButton.jsx";
-
-const ProductCard = ({ product }) => {
+import CartButton from "./CartButton";
+CartButton;
+const ProductCard = ({ product, cartDatas, setCartDatas }) => {
   return (
     <div className="border p-4 rounded-lg bg-white flex border-[#e5e7eb] flex-col">
       <img
@@ -15,7 +15,11 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className="mt-4">
-        <CartButton product={product} />
+        <CartButton
+          cartDatas={cartDatas}
+          setCartDatas={setCartDatas}
+          product={product}
+        />
       </div>
 
       <div className="flex flex-wrap justify-center gap-4 items-center mt-3">
