@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className="mt-4">
-        <CartButton product={product} />
+        <CartButton product={product} />  
       </div>
 
       <div className="flex flex-wrap justify-center gap-4 items-center mt-3">
