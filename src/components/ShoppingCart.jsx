@@ -1,4 +1,3 @@
-
 const ProductCard = ({ product, setCartDatas, cartDatas }) => {
   const { cartDatas, setCartDatas } = useContext(CartContext);
   let isProductHasCart = cartDatas?.find((cartData) => cartData.id === data.id);

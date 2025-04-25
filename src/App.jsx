@@ -32,10 +32,17 @@ function HomePage() {
         <Route
           path="/shoppingcart"
           element={
-            <CartPage cartDatas={cartDatas} setCartDatas={setCartDatas} />
+            <CartPage
+              products={products}
+              cartDatas={cartDatas}
+              setCartDatas={setCartDatas}
+            />
           }
         />
-        <Route path="/cart" element={<ProductDetail key={products.id} products={products} />} />
+        <Route
+          path="/cart"
+          element={<ProductDetail key={products.id} products={products} />}
+        />
       </Routes>
       <Footer />
     </>

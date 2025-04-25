@@ -1,8 +1,10 @@
 import { MdPerson } from "react-icons/md";
 import { FaCartShopping, FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import HeaderRespon from "./HeaderRespon";
 
 function Header({ cartDatas }) {
+  const cartCount = 4;
   return (
     <div className="container ">
       <div className="mx-auto px-4 py-3 hidden lg:block">
@@ -49,6 +51,7 @@ function Header({ cartDatas }) {
           </Link>
         </div>
       </div>
+      <HeaderRespon />
       <div className="flex lg:hidden md:block items-center justify-between p-4 gap-2 bg-white border-b">
         <div>
           <Link
