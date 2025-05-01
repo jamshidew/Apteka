@@ -1,12 +1,15 @@
-import CartButton from "../components/CartButton";
+import { Link } from "react-router-dom";
+import CartButton from "../components/CartButton.jsx";
 const ProductCard = ({ product, cartDatas, setCartDatas }) => {
   return (
     <div className="border p-4 rounded-lg bg-white flex border-[#e5e7eb] flex-col">
-      <img
-        className="w-70 h-70 object-contain"
-        src={product.img}
-        alt={product.name}
-      />
+      <Link to={`/carddetail/:id`}>
+        <img
+          className="w-70 h-70 object-contain"
+          src={product.img}
+          alt={product.name}                        
+        />
+      </Link>
       <p className="text-2xl font-semibold">
         от {product.price.toLocaleString()} сум
       </p>
@@ -14,7 +17,6 @@ const ProductCard = ({ product, cartDatas, setCartDatas }) => {
         <h2 className="line-clamp-3 text-sm break-words">{product.name}</h2>
         <p className="text-xs text-gray-400 ">{product.manufacturer}</p>
       </div>
-
       <div className="mt-4">
         <CartButton
           cartDatas={cartDatas}

@@ -43,16 +43,4 @@ const HeaderRespon = ({ cartCount }) => {
   );
 };
 
-const CartItem = ({ icon, label, count }) => (
-  <div className="relative flex flex-col items-center text-sm text-gray-600 hover:text-blue-500 cursor-pointer">
-    {icon}
-    {count > 0 && (
-      <span className="absolute -top-1 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5">
-        {count}
-      </span>
-    )}
-    <span className="text-xs mt-1">{label}</span>
-  </div>
-);
-
 export default HeaderRespon;

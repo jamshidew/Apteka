@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { products } from "../data/datas.js";
-const Cart = () => {
+const   Cart = () => {
   const [cartItems, setCartItems] = useState(
     products.slice(0, 4).map((item) => ({ ...item, quantity: 1 }))
   );

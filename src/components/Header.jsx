@@ -52,7 +52,7 @@ function Header({ cartDatas }) {
         </div>
       </div>
       <HeaderRespon />
-      <div className="flex lg:hidden md:block items-center justify-between p-4 gap-2 bg-white border-b ">
+      <div className="flex lg:hidden items-center justify-between p-4 gap-2 bg-white border-b ">
         <div>
           <Link
             to=""
@@ -64,7 +64,7 @@ function Header({ cartDatas }) {
         <div className="grow">
           <input
             type="text"
-            className="block w-full rounded-lg border-0 py-2 ring-gray-200 placeholder:text-gray-400 focus:ring-blue-500"
+            className="block w-full rounded-lg border-0 py-2 ring-1 p-2 ring-gray-200"
             placeholder="Поиск лекарств"
           />
         </div>

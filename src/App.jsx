@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header.jsx";
 import CategoryPage from "./pages/CategoryPage.jsx";
@@ -40,8 +40,15 @@ function HomePage() {
           }
         />
         <Route
-          path="/cart"
-          element={<ProductDetail key={products.id} products={products} />}
+          path="/carddetail/:id"
+          element={
+            <ProductDetail
+              key={products.id}
+              products={products}
+              cartDatas={cartDatas}
+              setCartDatas={setCartDatas}
+            />
+          }
         />
       </Routes>
       <Footer />
