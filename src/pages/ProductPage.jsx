@@ -1,6 +1,11 @@
 import { TbAlertCircleFilled } from "react-icons/tb";
 import { FaShare } from "react-icons/fa";
-export default function ProductDetail({ products }) {
+import CartButton from "../components/CartButton";
+import { useParams } from "react-router-dom";
+
+function ProductDetail({ products, cartDatas, setCartDatas }) {
+  const { id } = useParams();
+  let product = products.find((item) => item.id == id);
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -8,8 +13,8 @@ export default function ProductDetail({ products }) {
         <div className="bg-white rounded-lg p-6 border border-gray-200">
           <div className="flex justify-center">
             <img
-              src="/placeholder.svg?height=300&width=300"
-              alt="Алер-G таб. 10мг №20"
+              src={product.img}
+              alt={product.name}
               width={300}
               height={300}
               className="object-contain"
@@ -19,7 +24,7 @@ export default function ProductDetail({ products }) {
 
         {/* Product Details */}
         <div className="md:col-span-1 lg:col-span-1">
-          <h1 className="text-2xl font-bold mb-4">Алер-G таб. 10мг №20</h1>
+          <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
 
           <div className="flex items-center gap-4 mb-6">
             <span className="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">
@@ -48,37 +53,17 @@ export default function ProductDetail({ products }) {
                 </tr>
                 <tr className="border-b bg-gray-50">
                   <td className="px-4 py-3 text-gray-500">Производитель</td>
-                  <td className="px-4 py-3">GM PHARMACEUTICALS</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="px-4 py-3 text-gray-500">
-                    Страна происхождения
-                  </td>
-                  <td className="px-4 py-3">Грузия</td>
+                  <td className="px-4 py-3">{product.manufacturer}</td>
                 </tr>
                 <tr className="border-b bg-gray-50">
-                  <td className="px-4 py-3 text-gray-500">
-                    Действующие вещества
-                  </td>
-                  <td className="px-4 py-3">цетиризин</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="px-4 py-3 text-gray-500">Форма выпуска</td>
-                  <td className="px-4 py-3">таблетки</td>
-                </tr>
-                <tr className="border-b bg-gray-50">
-                  <td className="px-4 py-3 text-gray-500">
-                    Количество в упаковке
-                  </td>
-                  <td className="px-4 py-3">20</td>
-                </tr>
-                <tr className="border-b">
-                  <td className="px-4 py-3 text-gray-500">Порядок отпуска</td>
-                  <td className="px-4 py-3">Без рецепта</td>
+                  <td className="px-4 py-3 text-gray-500">Доставка</td>
+                  <td className="px-4 py-3">{product.delivery}</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 text-gray-500">Код товара</td>
-                  <td className="px-4 py-3">40607</td>
+                  <td className="px-4 py-3 text-gray-500">Наличие</td>
+                  <td className="px-4 py-3">
+                    {product.availability ? "Есть" : "Нет"}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -94,7 +79,9 @@ export default function ProductDetail({ products }) {
         </div>
 
         <div className="bg-gray-50 rounded-lg p-6">
-          <div className="text-2xl font-bold mb-4">38 800 – 43 300 сум</div>
+          <div className="text-2xl font-bold mb-4">
+            {product.price.toLocaleString()} сум
+          </div>
 
           <div className="mb-6">
             <a href="#" className="text-blue-500 hover:underline">
