@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 
 const CartButton = ({ product, cartDatas, setCartDatas }) => {
-  const existing = cartDatas.find((item) => item.id === product.id);
+  const existing = cartDatas.find((item) => item.id === product);
   const [quantity, setQuantity] = useState(existing?.quantity || 0);
 
   useEffect(() => {
     if (quantity === 0) {
-      setCartDatas((prev) => prev.filter((item) => item.id !== product.id));
+      setCartDatas((prev) => prev.filter((item) => item.id !== product));
     } else {
-      const updated = cartDatas.some((item) => item.id === product.id)
+      const updated = cartDatas.some((item) => item.id === product)
         ? cartDatas.map((item) =>
-            item.id === product.id ? { ...item, quantity } : item
+            item.id === product ? { ...item, quantity } : item
           )
         : [...cartDatas, { ...product, quantity }];
       setCartDatas(updated);

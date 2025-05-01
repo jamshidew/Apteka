@@ -18,7 +18,6 @@ const ProductCard = ({ product, cartDatas, setCartDatas }) => {
         <h2 className="line-clamp-3 text-sm break-words">{product.name}</h2>
         <p className="text-xs text-gray-400 ">{product.manufacturer}</p>
       </div>
-
       <div className="mt-4">
         <CartButton
           cartDatas={cartDatas}

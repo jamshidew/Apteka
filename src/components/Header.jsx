@@ -1,8 +1,10 @@
 import { MdPerson } from "react-icons/md";
 import { FaCartShopping, FaArrowLeftLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import HeaderRespon from "./HeaderRespon";
 
 function Header({ cartDatas }) {
+  const cartCount = 4;
   return (
     <div className="container ">
       <div className="mx-auto px-4 py-3 hidden lg:block">
@@ -49,7 +51,8 @@ function Header({ cartDatas }) {
           </Link>
         </div>
       </div>
-      <div className="flex lg:hidden md:block items-center justify-between p-4 gap-2 bg-white border-b">
+      <HeaderRespon />
+      <div className="flex lg:hidden items-center justify-between p-4 gap-2 bg-white border-b ">
         <div>
           <Link
             to=""
@@ -61,8 +64,8 @@ function Header({ cartDatas }) {
         <div className="grow">
           <input
             type="text"
-            className="block w-full rounded-lg border-0 p-2 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-blue-500 leading-6"
-            placeholder="Dorilarni qidirish"
+            className="block w-full rounded-lg border-0 py-2 ring-1 p-2 ring-gray-200"
+            placeholder="Поиск лекарств"
           />
         </div>
       </div>

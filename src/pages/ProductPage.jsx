@@ -1,6 +1,7 @@
 import { TbAlertCircleFilled } from "react-icons/tb";
 import { FaShare } from "react-icons/fa";
 import { useParams } from "react-router-dom";
+import CartButton from "../components/CartButton";
 
 function ProductDetail({ products, cartDatas, setCartDatas }) {
   const { id } = useParams();
@@ -8,8 +9,7 @@ function ProductDetail({ products, cartDatas, setCartDatas }) {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Product Image */}
-        <div className="bg-white rounded-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-lg border border-gray-200">
           <div className="flex justify-center">
             <img
               src={product.img}
@@ -21,7 +21,6 @@ function ProductDetail({ products, cartDatas, setCartDatas }) {
           </div>
         </div>
 
-        {/* Product Details */}
         <div className="md:col-span-1 lg:col-span-1">
           <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
 
@@ -29,11 +28,7 @@ function ProductDetail({ products, cartDatas, setCartDatas }) {
             <span className="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">
               Без рецепта
             </span>
-            <button
-              variant="ghost"
-              size="sm"
-              className="text-blue-500 flex items-center gap-1"
-            >
+            <button size="sm" className="text-blue-500 flex items-center gap-1">
               <FaShare className="h-4 w-4" />
               Поделиться
             </button>
@@ -43,14 +38,6 @@ function ProductDetail({ products, cartDatas, setCartDatas }) {
             <table className="w-full">
               <tbody>
                 <tr className="border-b">
-                  <td className="px-4 py-3 text-gray-500">Бренд</td>
-                  <td className="px-4 py-3">
-                    Алер-G таб. 10мг
-                    <br />
-                    Aler-G tab. 10mg
-                  </td>
-                </tr>
-                <tr className="border-b bg-gray-50">
                   <td className="px-4 py-3 text-gray-500">Производитель</td>
                   <td className="px-4 py-3">{product.manufacturer}</td>
                 </tr>
@@ -89,9 +76,13 @@ function ProductDetail({ products, cartDatas, setCartDatas }) {
             <span className="text-gray-600">, что бы точно узнать цену</span>
           </div>
 
-          <button className="w-full bg-blue-500 hover:bg-blue-600 text-white mb-4">
-            В корзину
-          </button>
+          <div className="mt-4">
+            <CartButton
+              cartDatas={cartDatas}
+              setCartDatas={setCartDatas}
+              product={product}
+            />
+          </div>
 
           <p className="text-gray-500 text-sm">
             Цена действует только при заказе на сайте
