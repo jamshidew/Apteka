@@ -35,7 +35,10 @@ function HomePage() {
             <CartPage cartDatas={cartDatas} setCartDatas={setCartDatas} />
           }
         />
-        <Route path="/cart" element={<ProductDetail products={products} />} />
+        <Route
+          path="/carddetail/:id"
+          element={<ProductDetail products={products} />}
+        />
       </Routes>
       <Footer />
     </>

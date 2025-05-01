@@ -1,6 +1,5 @@
 import { TbAlertCircleFilled } from "react-icons/tb";
 import { FaShare } from "react-icons/fa";
-import CartButton from "../components/CartButton";
 import { useParams } from "react-router-dom";
 
 function ProductDetail({ products, cartDatas, setCartDatas }) {
@@ -106,3 +105,4 @@ function ProductDetail({ products, cartDatas, setCartDatas }) {
     </div>
   );
 }
+export default ProductDetail;
